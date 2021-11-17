@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculatrice de salaire</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="assets/scripts/script.js"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <label>Brut annuel</label>
+      <input type="number" @input="handleAnnualGrossInput" />
+
+      <p>Brut mensuel: {{monthlyGross}}</p>
+      <p>Net annuel: {{annualNet}}</p>
+      <p>Net mensuel: {{monthlyNet}}</p>
+
+      <input type="checkbox" @click="changeStatus" />
+      <label>Cadre</label>
+    </div>
+  </body>
+</html>
